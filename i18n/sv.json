@@ -108,6 +108,19 @@
   "sensitivity_result": "Resultat av känslighetsanalys",
   "data_table": "Datatabell",
 
-  "quick_guide": "### Snabbguide\n\n**Räknare**\n- Ange MLSS, flöde eller SLR\n- Snabb beräkning av andra parametrar\n- Automatisk säkerhetskontroll\n\n**Datavyn**\n- Visa referensdata\n- Sök- och filtreringsstöd\n\n**Jämförelse**\n- Jämför flera driftscheman\n- Utvärdera säkerhet\n\n**Känslighetsanalys**\n- Analysera effekten av parameterförändringar"
+  "quick_guide": "### Snabbguide\n\n**Räknare**\n- Ange MLSS, flöde eller SLR\n- Snabb beräkning av andra parametrar\n- Automatisk säkerhetskontroll\n\n**Datavyn**\n- Visa referensdata\n- Sök- och filtreringsstöd\n\n**Jämförelse**\n- Jämför flera driftscheman\n- Utvärdera säkerhet\n\n**Känslighetsanalys**\n- Analysera effekten av parameterförändringar",
+
+  "rec_mlss_low": "⚠️ MLSS För lågt: Otillräcklig slamkoncentration kan minska behandlingseffektiviteten",
+  "rec_mlss_high": "⚠️ MLSS För högt: Slam kan vara anaerobiskt, dålig sedimentering",
+  "rec_flow_low": "⚠️ Ekvivalent flöde För lågt: Utrustning inte helt utnyttjad",
+  "rec_flow_high": "⚠️ Ekvivalent flöde För högt: Utrustning kan överbelastas",
+  "rec_slr_low": "⚠️ Feststoffbelastning För lågt: Energiförbrukning slösaktig",
+  "rec_slr_high": "⚠️ Feststoffbelastning För högt: Ofullständig behandling, utgångsvattnet kanske inte uppfyller standarder",
+  "rec_all_safe": "✓ Alla parametrar inom säkert område, utmärkt driftsstatus",
+
+  "formula_explanation": "Där: ",
+  "formula_coefficient": "3.6: Omvandlingsfaktor för sekunder/timme",
+  "formula_mg_kg": "1000: Omvandlingsfaktor från mg till kg",
+  "formula_area": "Area (m²): Behandlingsenhetens område, standard är 1"
 }
 

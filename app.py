@@ -232,12 +232,12 @@ if page == "home":
     # 计算公式
     st.markdown(f'<h3 class="section-header">{t("formula")}</h3>', unsafe_allow_html=True)
     st.latex(r"""
-    SLR = \frac{MLSS}{1000} \times \frac{EQ \times 3.6}{面积}
+    SLR = \frac{MLSS}{1000} \times \frac{EQ \times 3.6}{Area}
     """)
-    st.markdown("其中：")
-    st.markdown("- 3.6：秒/小时的换算系数")
-    st.markdown("- 1000：mg 到 kg 的换算系数")
-    st.markdown("- 面积（m²）：处理单元面积，默认为 1")
+    st.markdown(t("formula_explanation"))
+    st.markdown(f"- {t('formula_coefficient')}")
+    st.markdown(f"- {t('formula_mg_kg')}")
+    st.markdown(f"- {t('formula_area')}")
 
 # ============================================================================
 # 页面 2：计算工具
@@ -354,8 +354,8 @@ elif page == "calculator":
             # 建议
             if check['recommendations']:
                 st.markdown(f'<h4>{t("recommendations")}</h4>', unsafe_allow_html=True)
-                for rec in check['recommendations']:
-                    st.info(rec)
+                for rec_key in check['recommendations']:
+                    st.info(t(rec_key))
 
     elif calc_mode_index == 1:  # 计算 MLSS
         st.markdown(f'<h3 class="section-header">{t("mode_calc_mlss")}</h3>', unsafe_allow_html=True)
@@ -394,8 +394,8 @@ elif page == "calculator":
 
             if check['recommendations']:
                 st.markdown(f'<h4>{t("recommendations")}</h4>', unsafe_allow_html=True)
-                for rec in check['recommendations']:
-                    st.info(rec)
+                for rec_key in check['recommendations']:
+                    st.info(t(rec_key))
 
     else:  # 计算流量
         st.markdown(f'<h3 class="section-header">{t("mode_calc_flow")}</h3>', unsafe_allow_html=True)
@@ -434,8 +434,8 @@ elif page == "calculator":
 
             if check['recommendations']:
                 st.markdown(f'<h4>{t("recommendations")}</h4>', unsafe_allow_html=True)
-                for rec in check['recommendations']:
-                    st.info(rec)
+                for rec_key in check['recommendations']:
+                    st.info(t(rec_key))
 
 # ============================================================================
 # 页面：数据查看

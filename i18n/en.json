@@ -108,6 +108,19 @@
   "sensitivity_result": "Sensitivity Analysis Results",
   "data_table": "Data Table",
 
-  "quick_guide": "### Quick Guide\n\n**Calculator**\n- Input MLSS, flow, or SLR\n- Quick calculation of other parameters\n- Automatic safety check\n\n**Data View**\n- View reference data\n- Support search and filtering\n\n**Comparison**\n- Compare multiple operation schemes\n- Evaluate safety\n\n**Sensitivity Analysis**\n- Analyze the impact of parameter changes"
+  "quick_guide": "### Quick Guide\n\n**Calculator**\n- Input MLSS, flow, or SLR\n- Quick calculation of other parameters\n- Automatic safety check\n\n**Data View**\n- View reference data\n- Support search and filtering\n\n**Comparison**\n- Compare multiple operation schemes\n- Evaluate safety\n\n**Sensitivity Analysis**\n- Analyze the impact of parameter changes",
+
+  "rec_mlss_low": "⚠️ MLSS Too Low: Insufficient sludge concentration may reduce treatment efficiency",
+  "rec_mlss_high": "⚠️ MLSS Too High: Sludge may be anaerobic, poor settling",
+  "rec_flow_low": "⚠️ Equivalent Flow Too Low: Equipment not fully utilized",
+  "rec_flow_high": "⚠️ Equivalent Flow Too High: Equipment may be overloaded",
+  "rec_slr_low": "⚠️ Solids Loading Too Low: Wasted energy consumption",
+  "rec_slr_high": "⚠️ Solids Loading Too High: Incomplete treatment, effluent may not meet standards",
+  "rec_all_safe": "✓ All parameters in safe range, excellent operating condition",
+
+  "formula_explanation": "Where: ",
+  "formula_coefficient": "3.6: Conversion factor for seconds/hour",
+  "formula_mg_kg": "1000: Conversion factor from mg to kg",
+  "formula_area": "Area (m²): Treatment unit area, default is 1"
 }
 

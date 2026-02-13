@@ -108,6 +108,19 @@
   "sensitivity_result": "Sensitivitätsanalyseergebnis",
   "data_table": "Datentabelle",
 
-  "quick_guide": "### Kurzanleitung\n\n**Taschenrechner**\n- Geben Sie MLSS, Durchfluss oder SLR ein\n- Schnelle Berechnung anderer Parameter\n- Automatische Sicherheitsprüfung\n\n**Datenansicht**\n- Referenzdaten anzeigen\n- Suchunterstützung und Filterung\n\n**Vergleich**\n- Mehrere Betriebsschemata vergleichen\n- Sicherheit bewerten\n\n**Sensitivitätsanalyse**\n- Auswirkungen von Parameteränderungen analysieren"
+  "quick_guide": "### Kurzanleitung\n\n**Taschenrechner**\n- Geben Sie MLSS, Durchfluss oder SLR ein\n- Schnelle Berechnung anderer Parameter\n- Automatische Sicherheitsprüfung\n\n**Datenansicht**\n- Referenzdaten anzeigen\n- Suchunterstützung und Filterung\n\n**Vergleich**\n- Mehrere Betriebsschemata vergleichen\n- Sicherheit bewerten\n\n**Sensitivitätsanalyse**\n- Auswirkungen von Parameteränderungen analysieren",
+
+  "rec_mlss_low": "⚠️ MLSS Zu Niedrig: Unzureichende Schlammkonzentration kann die Behandlungseffizienz verringern",
+  "rec_mlss_high": "⚠️ MLSS Zu Hoch: Schlamm kann anaerob sein, schlechte Absetzung",
+  "rec_flow_low": "⚠️ Äquivalenter Durchfluss Zu Niedrig: Ausrüstung nicht vollständig genutzt",
+  "rec_flow_high": "⚠️ Äquivalenter Durchfluss Zu Hoch: Ausrüstung kann überlastet sein",
+  "rec_slr_low": "⚠️ Feststoffbeladung Zu Niedrig: Energieverbrauch verschwendet",
+  "rec_slr_high": "⚠️ Feststoffbeladung Zu Hoch: Unvollständige Behandlung, Ablauf erfüllt möglicherweise nicht die Standards",
+  "rec_all_safe": "✓ Alle Parameter im sicheren Bereich, ausgezeichneter Betriebszustand",
+
+  "formula_explanation": "Wobei: ",
+  "formula_coefficient": "3.6: Umrechnungsfaktor für Sekunden/Stunde",
+  "formula_mg_kg": "1000: Umrechnungsfaktor von mg zu kg",
+  "formula_area": "Fläche (m²): Behandlungseinheitsfläche, Standard ist 1"
 }
 

@@ -147,29 +147,29 @@ class WastewaterCalculator:
         }
 
     def _generate_recommendations(self, mlss_check: dict, flow_check: dict, slr_check: dict) -> list:
-        """生成运行建议"""
+        """生成运行建议的翻译键列表"""
         recommendations = []
 
         if not mlss_check['safe']:
             if mlss_check['status'] == 'too_low':
-                recommendations.append('⚠️ MLSS 过低：污泥浓度不足，处理效率可能下降')
+                recommendations.append('rec_mlss_low')
             else:
-                recommendations.append('⚠️ MLSS 过高：污泥可能缺氧，沉降性差')
+                recommendations.append('rec_mlss_high')
 
         if not flow_check['safe']:
             if flow_check['status'] == 'too_low':
-                recommendations.append('⚠️ 等效流量过低：设备未充分利用')
+                recommendations.append('rec_flow_low')
             else:
-                recommendations.append('⚠️ 等效流量过高：设备可能过载')
+                recommendations.append('rec_flow_high')
 
         if not slr_check['safe']:
             if slr_check['status'] == 'too_low':
-                recommendations.append('⚠️ 固体负荷过低：能耗浪费')
+                recommendations.append('rec_slr_low')
             else:
-                recommendations.append('⚠️ 固体负荷过高：处理不彻底，出水可能不达标')
+                recommendations.append('rec_slr_high')
 
         if not recommendations:
-            recommendations.append('✓ 所有参数在安全范围内，运行状态良好')
+            recommendations.append('rec_all_safe')
 
         return recommendations
 

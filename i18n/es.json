@@ -108,6 +108,19 @@
   "sensitivity_result": "Resultado del Análisis de Sensibilidad",
   "data_table": "Tabla de Datos",
 
-  "quick_guide": "### Guía Rápida\n\n**Calculadora**\n- Ingrese MLSS, flujo o SLR\n- Cálculo rápido de otros parámetros\n- Verificación automática de seguridad\n\n**Vista de Datos**\n- Ver datos de referencia\n- Compatibilidad de búsqueda y filtrado\n\n**Comparación**\n- Compare múltiples esquemas de operación\n- Evalúe la seguridad\n\n**Análisis de Sensibilidad**\n- Analice el impacto de cambios de parámetros"
+  "quick_guide": "### Guía Rápida\n\n**Calculadora**\n- Ingrese MLSS, flujo o SLR\n- Cálculo rápido de otros parámetros\n- Verificación automática de seguridad\n\n**Vista de Datos**\n- Ver datos de referencia\n- Compatibilidad de búsqueda y filtrado\n\n**Comparación**\n- Compare múltiples esquemas de operación\n- Evalúe la seguridad\n\n**Análisis de Sensibilidad**\n- Analice el impacto de cambios de parámetros",
+
+  "rec_mlss_low": "⚠️ MLSS Demasiado Bajo: Concentración insuficiente de lodos puede reducir la eficiencia de tratamiento",
+  "rec_mlss_high": "⚠️ MLSS Demasiado Alto: Los lodos pueden ser anaeróbicos, pobre sedimentación",
+  "rec_flow_low": "⚠️ Flujo Equivalente Demasiado Bajo: Equipo no completamente utilizado",
+  "rec_flow_high": "⚠️ Flujo Equivalente Demasiado Alto: El equipo puede estar sobrecargado",
+  "rec_slr_low": "⚠️ Carga de Sólidos Demasiado Baja: Consumo de energía desperdiciado",
+  "rec_slr_high": "⚠️ Carga de Sólidos Demasiado Alta: Tratamiento incompleto, el efluente puede no cumplir estándares",
+  "rec_all_safe": "✓ Todos los parámetros dentro del rango seguro, condición operativa excelente",
+
+  "formula_explanation": "Donde: ",
+  "formula_coefficient": "3.6: Factor de conversión de segundos/hora",
+  "formula_mg_kg": "1000: Factor de conversión de mg a kg",
+  "formula_area": "Área (m²): Área de la unidad de tratamiento, valor predeterminado es 1"
 }
 
