@@ -1,6 +1,0 @@
-# 系统依赖包（用于 Streamlit Cloud）
-# 该文件列出 Streamlit Cloud 需要安装的系统级别依赖包
-# 通常在无法通过 pip 直接解决依赖时才需要此文件
-
-# 如果需要 graphviz 或其他系统工具，可以在这里添加
-
