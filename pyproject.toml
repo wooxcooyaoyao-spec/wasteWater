@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "WasteWaterTool"
+version = "1.0.0"
+description = "污泥处理系统参数计算工具 - 专为自来水处理污泥处理环节设计"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "WasteWaterTool Developer", email = ""}
+]
+maintainers = []
+keywords = [
+    "wastewater",
+    "treatment",
+    "parameters",
+    "calculation",
+    "excel",
+    "analysis",
+    "slr",
+    "mlss",
+    "污泥处理",
+    "参数计算",
+    "Excel分析"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Office/Business :: Financial :: Spreadsheet",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+
+# 必需依赖
+dependencies = [
+    "openpyxl>=3.0.0",
+    "xlwings>=0.27.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/WasteWaterTool"
+"Documentation" = "https://github.com/yourusername/WasteWaterTool#readme"
+"Source Code" = "https://github.com/yourusername/WasteWaterTool"
+"Issue Tracker" = "https://github.com/yourusername/WasteWaterTool/issues"
+
+[tool.setuptools]
+# 指定包含的包
+packages = ["WasteWaterTool"]
+
