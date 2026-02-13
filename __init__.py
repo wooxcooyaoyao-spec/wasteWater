@@ -45,5 +45,11 @@ __all__ = [
 
 from excel_handler import ExcelDataHandler
 from wastewater_treatment_calc import WastewaterCalculator
-from xlwings_integration import WastewaterExcelFunctions
+
+# xlwings_integration 是可选的，只在需要时导入
+try:
+    from xlwings_integration import WastewaterExcelFunctions
+except ImportError:
+    # 如果 xlwings 未安装，WastewaterExcelFunctions 将不可用
+    WastewaterExcelFunctions = None
 

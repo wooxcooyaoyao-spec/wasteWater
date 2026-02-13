@@ -1,4 +1,5 @@
 # Streamlit 应用配置文件
+# 已针对本地和云环境（Streamlit Cloud）进行优化
 
 [theme]
 # 主题颜色
@@ -11,17 +12,18 @@ font = "sans serif"
 [server]
 # 服务器配置
 port = 8501
-headless = false
+headless = true
 runOnSave = true
 maxUploadSize = 200
-
-[logger]
-# 日志配置
-level = "info"
+enableXsrfProtection = true
 
 [client]
 # 客户端配置
 showErrorDetails = true
+
+[logger]
+# 日志配置
+level = "info"
 
 [browser]
 # 浏览器配置
