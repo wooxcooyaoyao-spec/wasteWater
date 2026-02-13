@@ -22,7 +22,6 @@ level = "info"
 [client]
 # 客户端配置
 showErrorDetails = true
-showStderrMessageOnSuccess = false
 
 [browser]
 # 浏览器配置
