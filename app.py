@@ -15,9 +15,11 @@ import pandas as pd
 # 多语言支持
 import streamlit as st
 
-# 初始化语言
+# 初始化语言和当前页面
 if "language" not in st.session_state:
     st.session_state.language = "zh"
+if "current_page" not in st.session_state:
+    st.session_state.current_page = 0  # 默认首页
 
 # 添加当前目录到路径
 tool_dir = Path(__file__).parent
@@ -93,35 +95,26 @@ st.markdown("""
 # 侧边栏导航
 # ============================================================================
 
-# 语言切换
+# 语言切换 - 使用回调函数保持页面位置
+def set_language(lang):
+    st.session_state.language = lang
+
 st.sidebar.write("****")
 col1, col2, col3 = st.sidebar.columns(3)
 with col1:
-    if st.button("🇨🇳 中文"):
-        st.session_state.language = "zh"
-        st.rerun()
+    st.button("🇨🇳 中文", on_click=set_language, args=("zh",), key="btn_zh")
 with col2:
-    if st.button("🇦🇺 English"):
-        st.session_state.language = "en"
-        st.rerun()
+    st.button("🇦🇺 English", on_click=set_language, args=("en",), key="btn_en")
 with col3:
-    if st.button("🇮🇳 हिन्दी"):
-        st.session_state.language = "hi"
-        st.rerun()
+    st.button("🇮🇳 हिन्दी", on_click=set_language, args=("hi",), key="btn_hi")
 
 col1, col2, col3 = st.sidebar.columns(3)
 with col1:
-    if st.button("🇪🇸 Español"):
-        st.session_state.language = "es"
-        st.rerun()
+    st.button("🇪🇸 Español", on_click=set_language, args=("es",), key="btn_es")
 with col2:
-    if st.button("🇩🇪 Deutsch"):
-        st.session_state.language = "de"
-        st.rerun()
+    st.button("🇩🇪 Deutsch", on_click=set_language, args=("de",), key="btn_de")
 with col3:
-    if st.button("🇸🇪 Svenska"):
-        st.session_state.language = "sv"
-        st.rerun()
+    st.button("🇸🇪 Svenska", on_click=set_language, args=("sv",), key="btn_sv")
 
 st.sidebar.markdown("---")
 st.sidebar.title(t("nav_menu"))
@@ -140,9 +133,12 @@ page_values = [value for _, value in page_options]
 page_index = st.sidebar.radio(
     t("select_func"),
     range(len(page_labels)),
-    format_func=lambda i: page_labels[i]
+    format_func=lambda i: page_labels[i],
+    index=st.session_state.current_page
 )
 page = page_values[page_index]
+# 保存当前页面到 session_state
+st.session_state.current_page = page_index
 
 st.sidebar.markdown("---")
 st.sidebar.title(t("help"))
