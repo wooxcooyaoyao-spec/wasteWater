@@ -11,6 +11,8 @@
 - ✅ **对比分析**：支持多个运行场景的并行对比
 - ✅ **敏感性分析**：分析参数变化对结果的影响
 - ✅ **相对路径设计**：工具可独立部署到任意位置
+- ✅ **🌐 Web 应用**：基于 Streamlit 的友好 Web 界面
+- ✅ **📊 数据可视化**：参数对比和敏感性分析图表
 
 ## 📁 目录结构
 
@@ -32,15 +34,44 @@ WasteWaterTool/
 
 ## 🚀 快速开始
 
-### 安装依赖
+### 方案 A：Web 应用（推荐初学者）
 
+最简单的使用方式，打开即用！
+
+#### macOS/Linux:
 ```bash
-pip install openpyxl
+chmod +x run_streamlit.sh
+./run_streamlit.sh
 ```
 
-### 基础使用
+#### Windows:
+双击 `run_streamlit.bat`
 
-#### 方法 1：Python 代码调用
+然后在浏览器打开 `http://localhost:8501`
+
+**功能**:
+- 🔧 快速参数计算工具
+- 📈 查看原始 Excel 数据
+- 🔀 参数方案对比
+- 📉 敏感性分析
+
+📖 详细指南：[快速开始_Streamlit.md](快速开始_Streamlit.md) 和 [Streamlit前端使用指南.md](Streamlit前端使用指南.md)
+
+---
+
+### 方案 B：Python 编程使用
+
+用于集成到其他应用或自动化脚本。
+
+#### 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+#### 基础使用
+
+##### 方法 1：Python 代码调用
 
 ```python
 from wastewater_treatment_calc import WastewaterCalculator
@@ -57,7 +88,7 @@ check = calc.check_operating_point(3500, 100)
 print(f"安全: {check['overall_safe']}")
 ```
 
-#### 方法 2：生成 Excel 报告
+##### 方法 2：生成 Excel 报告
 
 ```python
 from excel_handler import ExcelDataHandler
@@ -73,7 +104,7 @@ variations = {
 handler.create_comparison_excel('output/对比.xlsx', variations)
 ```
 
-#### 方法 3：运行脚本演示
+##### 方法 3：运行脚本演示
 
 从工程根目录运行：
 
@@ -104,13 +135,27 @@ SLR = (MLSS / 1000) × (EQ × 3.6) / 面积
 
 ## 📖 文档
 
-详细的使用指南请查看：[doc/使用指南.md](doc/使用指南.md)
+### 推荐阅读顺序
 
-涵盖内容：
-- 详细的概念解释
-- 多种使用场景
-- 常见问题解答
-- 扩展和集成示例
+1. **🌐 [快速开始_Streamlit.md](快速开始_Streamlit.md)** ⭐ 从这里开始
+   - 5 分钟快速启动 Web 应用
+   - 最简单的使用方式
+
+2. **🌐 [Streamlit前端使用指南.md](Streamlit前端使用指南.md)**
+   - 完整的功能介绍
+   - 常见问题解答
+   - 高级配置
+
+3. **📚 [使用指南.md](使用指南.md)**
+   - 详细的概念解释
+   - Python 编程示例
+   - 多种使用场景
+   - 常见问题解答
+   - 扩展和集成示例
+
+4. **🔧 [工程架构描述.md](工程架构描述.md)**
+   - 项目文件结构
+   - 模块功能说明
 
 ## 🔧 模块说明
 
@@ -233,11 +278,41 @@ ls -la data/
 pip install --upgrade openpyxl
 ```
 
+## 🌐 Web 应用 (Streamlit)
+
+本工程现在提供了一个完整的 Web 应用，通过友好的图形界面快速使用所有功能。
+
+**启动方式**:
+
+macOS/Linux:
+```bash
+./run_streamlit.sh
+```
+
+Windows:
+```
+双击 run_streamlit.bat
+```
+
+**Web 应用功能**:
+| 页面 | 功能 |
+|------|------|
+| 📊 首页 | 功能介绍和参数说明 |
+| 🔧 计算工具 | 快速参数计算和验证 |
+| 📈 数据查看 | Excel 数据查看和导出 |
+| 🔀 参数对比 | 多方案对比分析 |
+| 📉 敏感性分析 | 参数变化影响分析 |
+
+详见：[Streamlit前端使用指南.md](Streamlit前端使用指南.md)
+
 ## 📦 依赖项
 
+### 必需依赖
 - Python 3.7+
 - openpyxl 3.0+ （用于 Excel 处理）
 - xlwings （可选，用于 Excel 集成）
+- streamlit 1.28+ （用于 Web 应用）
+- pandas 1.5+ （用于数据处理）
 
 ## 🔐 项目特点
 

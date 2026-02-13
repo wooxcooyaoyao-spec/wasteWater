@@ -1,0 +1,30 @@
+# Streamlit 应用配置文件
+
+[theme]
+# 主题颜色
+primaryColor = "#1f77b4"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f0f2f6"
+textColor = "#262730"
+font = "sans serif"
+
+[server]
+# 服务器配置
+port = 8501
+headless = false
+runOnSave = true
+maxUploadSize = 200
+
+[logger]
+# 日志配置
+level = "info"
+
+[client]
+# 客户端配置
+showErrorDetails = true
+showStderrMessageOnSuccess = false
+
+[browser]
+# 浏览器配置
+gatherUsageStats = false
+

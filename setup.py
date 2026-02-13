@@ -66,6 +66,8 @@ setup(
     install_requires=[
         "openpyxl>=3.0.0",
         "xlwings>=0.27.0",
+        "streamlit>=1.28.0",
+        "pandas>=1.5.0",
     ],
 
     # 可选依赖
